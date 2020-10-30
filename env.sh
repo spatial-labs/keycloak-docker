@@ -1,0 +1,28 @@
+#!/bin/bash
+PUID=${PUID:=1000}
+PGID=${PGID:=1000}
+TZ=Europe/Berlin
+URL=decision-labs.com
+SUBDOMAINS=sso,
+VALIDATION=http
+EMAIL=shoaib@decision-labs.com
+DHLEVEL=2048
+ONLY_SUBDOMAINS=true
+STAGING=false
+POSTGRES_PASSWORD=$(openssl rand -hex 8)
+KEYCLOAK_PASSWORD=$(openssl rand -hex 8)
+
+cat << EOF > ./.env
+PUID=${PUID}
+PGID=${PGID}
+TZ=${TZ}
+URL=${URL}
+SUBDOMAINS=sso,
+VALIDATION=http
+EMAIL=${EMAIL}
+DHLEVEL=2048
+ONLY_SUBDOMAINS=true
+STAGING=false
+POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+KEYCLOAK_PASSWORD=${KEYCLOAK_PASSWORD}
+EOF
