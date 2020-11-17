@@ -2,10 +2,10 @@
 PUID=${PUID:=1000}
 PGID=${PGID:=1000}
 TZ=Europe/Berlin
-URL=decision-labs.com
+URL=spatial-labs.dev
 SUBDOMAINS=sso,
 VALIDATION=http
-EMAIL=shoaib@decision-labs.com
+EMAIL=team@spatial-labs.dev
 DHLEVEL=2048
 ONLY_SUBDOMAINS=true
 STAGING=false
